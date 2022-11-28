@@ -1,7 +1,7 @@
 const grid = document.querySelector('.grid');
 let currentShooterIndex = 203;
 
-for (let i = 0; i < 255; i++) {
+for (let i = 0; i < 225; i++) {
     const square = document.createElement('div');
     grid.appendChild(square);
 }
@@ -23,3 +23,15 @@ function draw() {
 draw()
 
 squares[currentShooterIndex].classList.add('shooter');
+
+function moveSooter() {
+    squares[currentShooterIndex].classList.remove('shooter');
+    switch(e.key) {
+        case 'ArrowLeft':
+            if (currentShooterIndex % width !== 0) currentShooterIndex -= 1;
+            break;
+        case 'ArrowRight':
+            if (currentShooterIndex % width < width - 1) currentShooterIndex -= 1;
+            break;
+    }
+}
