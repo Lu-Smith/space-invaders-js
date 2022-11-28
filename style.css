@@ -8,6 +8,7 @@ body {
     text-align: center;
     padding: 20px;
     background-color: rgb(172, 204, 188);
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -15,6 +16,8 @@ h1 {
     line-height: 40px;
     color: white;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 4px;
 }
 
 h2 {
@@ -32,6 +35,9 @@ button {
     color: rgb(15, 1, 1);
     position: relative;
     font-weight: 700;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    transition: all 200ms ease-in-out;
+    
 }
 
 button::before {
@@ -45,10 +51,16 @@ button::before {
     background-color: rgb(25, 245, 135);
     transform: scaleX(0);
     transition: all 500ms ease-in-out;
+    
 }
 
 button:hover::before, button:focus::before {
     transform: scaleX(1);
+    box-shadow: none;
+}
+
+button:hover, button:focus {
+    box-shadow: none;
 }
 
 button {
