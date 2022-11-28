@@ -17,7 +17,18 @@ h1 {
 h2 {
     font-size: 20px;
     line-height: 30px;
-    margin: 40px;
+    margin: 30px;
+}
+
+button {
+    padding: 15px 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+main {
+    height: 80vh;
 }
 
 .grid {
