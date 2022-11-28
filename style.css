@@ -7,11 +7,14 @@
 body {
     text-align: center;
     padding: 20px;
+    background-color: rgb(172, 204, 188);
 }
 
 h1 {
     font-size: 30px;
     line-height: 40px;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -25,10 +28,39 @@ button {
     font-size: 20px;
     border: none;
     outline: none;
+    background-color: rgb(245, 149, 208);
+    color: rgb(15, 1, 1);
+    position: relative;
+    font-weight: 700;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgb(25, 245, 135);
+    transform: scaleX(0);
+    transition: all 500ms ease-in-out;
+}
+
+button:hover::before, button:focus::before {
+    transform: scaleX(1);
+}
+
+button {
+    z-index: 1;
 }
 
 main {
     height: 80vh;
+    background-color: white;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-radius: 20px;
 }
 
 .grid {
@@ -74,14 +106,14 @@ footer {
 footer a {
     display: inline-flex;
     text-decoration: none;
-    color: #f1720a;
+    color: #fdfcfb;
     transition: all 200ms ease-in-out;
     transform: rotateY(0deg);
 }
 
 
 footer a:hover {
-    color: #914a10;
+    color: #636160;
     transform: translateY(-5px) rotateY(30deg);
 
     
