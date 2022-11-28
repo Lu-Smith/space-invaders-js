@@ -1,4 +1,5 @@
 const grid = document.querySelector('.grid');
+const resultDisplay = document.querySelector('#results');
 let currentShooterIndex = 202;
 let width = 15;
 let direction = 1;
@@ -77,7 +78,7 @@ function moveInvaders() {
     draw();
 
     if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
-        console.log('game over');
+        resultDisplay.innerHTML = 'Game Over';
         clearInterval(invadersId);
     }
 }
