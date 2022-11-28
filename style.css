@@ -34,10 +34,14 @@ h1 {
 }
 
 .shooter {
-    background-color: rgb(67, 120, 180);
+    background-color: rgb(11, 163, 19);
     border-radius: 2px;
 }
 
 .laser {
     background-color: orange;
+}
+
+.boom {
+    background-color: rgb(255, 0, 0);
 }
