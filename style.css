@@ -26,3 +26,8 @@ h1 {
     width: 20px;
     height: 20px;
 }
+
+.invader {
+    background-color: rgb(156, 62, 62);
+    border-radius: 10px;
+}
