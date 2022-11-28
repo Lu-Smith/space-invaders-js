@@ -19,9 +19,15 @@ function draw() {
     for (let i = 0; i < alienInvaders.length; i++) {
         squares[alienInvaders[i]].classList.add('invader');
     }
-}
+};
 
-draw()
+draw();
+
+function remove() {
+    for (let i = 0; i < alienInvaders.length; i++) {
+        squares[alienInvaders[i]].classList.remove('invader');
+    }
+};
 
 squares[currentShooterIndex].classList.add('shooter');
 
@@ -36,6 +42,16 @@ function moveSooter(e) {
             break;
     }
     squares[currentShooterIndex].classList.add('shooter');
-}
+};
 
 document.addEventListener('keydown', moveSooter);
+
+function moveInvaders() {
+    const leftEdge = alienInvaders[0] % width === 0;
+    const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width - 1;
+    remove();
+    for (let i = 0; i < alienInvaders.length; i++) {
+        alienInvaders[i] += 1;
+    };
+    draw();
+}
