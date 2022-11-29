@@ -141,9 +141,14 @@ function moveInvaders() {
 
 function start() {
   
-      invadersId = setInterval(moveInvaders, 600)
-
-      document.addEventListener('keydown', shoot)
+       if (startGame.innerHTML === 'Play again') {
+        location.reload();
+        return false;
+       } else {
+        invadersId = setInterval(moveInvaders, 600)
+        document.addEventListener('keydown', shoot)
+       }
+      
 }
 
 startGame.addEventListener('click', start)
