@@ -78,10 +78,15 @@ function shoot(e) {
           const alienRemoved = alienInvaders.indexOf(currentLaserIndex)
           aliensRemoved.push(alienRemoved)
           results++
-        } 
+         } 
+         if (resultsDisplay.innerHTML === 'GAME OVER') {
+          resultsDisplay.innerHTML === 'GAME OVER'
+         } else if (resultsDisplay.innerHTML === 'YOU WON') {
+          resultsDisplay.innerHTML === 'YOU WON'
+         } else {
           resultsDisplay.innerHTML = results
+         }
         }
-    
     }
     
   switch(e.key) {
@@ -132,7 +137,7 @@ function start() {
           }
         }
         if (aliensRemoved.length === alienInvaders.length) {
-          resultsDisplay.innerHTML = 'YOU WIN'
+          resultsDisplay.innerHTML = 'YOU WON'
           clearInterval(invadersId)
         }
       }
